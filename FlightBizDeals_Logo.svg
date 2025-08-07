@@ -1,0 +1,45 @@
+<svg id="logoSVG" width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#0052cc;stop-opacity:1"/>
+                        <stop offset="50%" style="stop-color:#1976d2;stop-opacity:1"/>
+                        <stop offset="100%" style="stop-color:#2196f3;stop-opacity:1"/>
+                    </linearGradient>
+                    
+                    <filter id="strongShadow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feDropShadow dx="4" dy="8" stdDeviation="6" flood-color="#0052cc" flood-opacity="0.5"/>
+                    </filter>
+                    
+                    <filter id="whiteGlow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                        <feMerge> 
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                
+                <circle cx="60" cy="60" r="52" fill="none" stroke="url(#mainGrad)" stroke-width="3" opacity="0.3"/>
+                <circle cx="60" cy="60" r="45" fill="url(#mainGrad)" filter="url(#strongShadow)"/>
+                <circle cx="60" cy="60" r="40" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                
+                <g transform="translate(60,60) rotate(-30)" filter="url(#whiteGlow)">
+                    <path d="M-22,0 L28,0 L26,-4 L-20,-4 Z" fill="white" stroke="white" stroke-width="2"/>
+                    <path d="M-10,-10 L15,-10 L20,-18 L-15,-18 Z" fill="white" stroke="white" stroke-width="1.5"/>
+                    <path d="M10,4 L22,4 L25,12 L12,12 Z" fill="white" opacity="0.95"/>
+                    <path d="M22,-2 L32,8 L30,6 L22,4 Z" fill="white"/>
+                    <circle cx="-18" cy="0" r="3" fill="white" opacity="0.9"/>
+                    <ellipse cx="-5" cy="-14" rx="3" ry="2" fill="white" opacity="0.8"/>
+                    <ellipse cx="8" cy="-14" rx="3" ry="2" fill="white" opacity="0.8"/>
+                </g>
+                
+                <g opacity="0.6">
+                    <path d="M25,45 Q40,35 50,30" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <path d="M30,75 Q45,80 55,85" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M20,60 Q35,55 45,50" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </g>
+                
+                <circle cx="60" cy="25" r="2" fill="white" opacity="0.8"/>
+                <circle cx="90" cy="35" r="1.5" fill="white" opacity="0.6"/>
+                <circle cx="30" cy="35" r="1.5" fill="white" opacity="0.6"/>
+            </svg>
